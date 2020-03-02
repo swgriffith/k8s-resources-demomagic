@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: rs-demo
+  name: rs-demo
+spec:
+  replicas: 8
+  selector:
+    matchLabels:
+      run: rs-demo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: rs-demo
+    spec:
+      containers:
+      - image: nginx
+        name: rs-demo
+        resources: {}
+status: {}
